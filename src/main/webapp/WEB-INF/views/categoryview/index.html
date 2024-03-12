@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JSP - Hello World</title>
+</head>
+<body>
+<h1><%= "Hello World!" %>
+</h1>
+<br/>
+    <table>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+        </tr>
+        <tbody>
+            <tr th:each="row,rowStat : ${categoryList}">
+                <td th:text="${row.getId()}"></td>
+                <td th:text="${row.getName()}"></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
